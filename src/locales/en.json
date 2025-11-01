@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hi, I am Gabriel",
+    "description": "Full Stack Developer"
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewMore": "View More"
+  },
+  "contact": {
+    "description": "Interested in a project or want to create something new? Let’s talk."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Início",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "title": "Olá, eu sou Gabriel",
+    "description": "Desenvolvedor Full Stack"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "viewMore": "Ver mais"
+  },
+  "contact": {
+    "description": "Ficou interessado em algum projeto ou quer criar algo novo? Vamos conversar."
+  }
+}
