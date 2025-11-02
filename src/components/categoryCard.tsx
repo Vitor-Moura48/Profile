@@ -1,19 +1,12 @@
 "use client";
 
-import React, { ReactNode } from 'react';
-
 export const CategoryCard = (
-    { title, children, isActive = false, onClick, } : 
-    { title: string, children: ReactNode, isActive?: boolean, onClick?: () => void } 
+    { title, isActive = false, onClick, } : 
+    { title: string, isActive?: boolean, onClick?: () => void } 
   ) => {
-  
-  const onToggle = () => void {
-    isActive : !isActive
-  };
 
   // Combina as funções de toggle e onClick do usuário
   const handleClick = () => {
-    onToggle();
     if (onClick) {
       onClick();
     }
@@ -28,34 +21,25 @@ export const CategoryCard = (
   const transitionClasses = "transition-all duration-300 ease-in-out";
 
   return (
-    <div>
+    <div className="flex w-full max-w-[300px] min-w-[200px] mx-4">
 
       {/* Botão Principal da Categoria */}
       <button
 
         onClick={handleClick}
         className={`
-        flex items-center justify-between p-4 rounded-lg text-white font-semibold text-lg min-w-[300px]
+        flex items-center justify-center p-4 rounded-lg text-white font-semibold text-lg w-full
           ${activeClasses}
           ${transitionClasses}
           focus:outline-none focus:ring-4 focus:ring-blue-500/50 
           transform hover:scale-[1.01] active:scale-[0.99] // Animação de clique (leve)
         `}
       >
+      
         <span>{title}</span>
 
       </button>
 
-      {/* Conteúdo Expansível (Subcards) */}
-      <div
-        className={`
-          overflow-hidden 
-          ${transitionClasses}
-          ${isActive ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}
-        `}
-      >
-        {children}
-      </div>
     </div>
   );
 };

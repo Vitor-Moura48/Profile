@@ -1,23 +1,13 @@
 "use client";
 
-type Project = {
-  id: number;
-  title: string;
-  image: string;
-  description: string;
-};
+import { Project } from '../types/project';
 
 export const ProjectCard = (
     { project, isActive = false, onClick,}: 
     { project: Project; isActive?: boolean; onClick?: () => void; }
   ) => {
 
-  const onToggle = () => void {
-    isActive : !isActive
-  };
-
   const handleClick = () => {
-    onToggle();
     if (onClick) {
       onClick();
     }
@@ -34,7 +24,7 @@ export const ProjectCard = (
         }`}
     >
       <img
-        src={project.image}
+        src={project.thumbnail}
         alt={project.title}
         className="w-full h-32 object-contain bg-zinc-800"
       />

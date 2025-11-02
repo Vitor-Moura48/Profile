@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "/img/rune.png",
+    "title": "FogueteIa",
+    "category": "Programação",
+    "subcategory": "IA",
+    "dateCompleted": "06/06/2024",
+    "description": "Este projeto foca na criação de um agente inteligente usando redes neurais, implementadas com PyTorch e NumPy, para controlar autonomamente um foguete. Em um ambiente simulado, o agente aprende a navegar por pontos específicos e realizar pousos seguros. A otimização do agente é feita através de um algoritmo genético, permitindo a experimentação com arquiteturas de rede neural, funções de ativação e parâmetros de seleção para um desempenho adaptativo.",
+    "links": [{
+      "type": "github",
+      "url": "https://github.com/Vitor-Moura48/FogueteIA",
+      "label": "GitHub"
+    }],
+    "media": [{
+        "type": "image",
+        "src": "/img/foguete_ia/foguete_ia_01.png",
+        "caption": "Foguete em voo no ambiente simulado."
+        }, {
+        "type": "image",
+        "src": "/img/foguete_ia/foguete_ia_02.png",
+        "caption": ""
+        }, {
+        "type": "image",
+        "src": "/img/foguete_ia/foguete_ia_03.png",
+        "caption": "Foguete realizando um pouso suave."
+        }, {
+        "type": "image",
+        "src": "/img/foguete_ia/foguete_ia_04.png",
+        "caption": "Evolução do desempenho do agente ao longo das gerações."
+    }],
+    "techStack": [{
+        "label": "PyTorch",
+        "icon_src": "/img/icons/python-logo-only.svg"
+        }, {
+        "label": "NumPy",
+        "icon_src": "/img/icons/numpy-svgrepo-com.svg"
+        }, {
+        "label": "Pygame",
+        "icon_src": "/img/icons/download.png"
+    }],
+    "conclusion": "Este projeto demonstrou a eficácia dos algoritmos genéticos na otimização de redes neurais para controle robótico complexo. A capacidade de experimentar diversas arquiteturas e estratégias evolutivas abriu caminhos para entender como a IA pode aprender e se adaptar em ambientes dinâmicos, culminando em um agente de foguete capaz de navegação e pouso autônomos."
+  },
+  {
+    "id": 2,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto B",
+    "category": "Artes Visuais",
+    "subcategory": "Jogos",
+    "dateCompleted": "",
+    "description": "Cenário montanhoso em pixel art.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 3,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto C",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 16-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 4,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto D",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 32-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 5,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto E",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 8-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 6,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto F",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 4-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 7,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto G",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 2-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 8,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto H",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 1-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  },
+  {
+    "id": 9,
+    "thumbnail": "/img/rune.png",
+    "title": "Projeto I",
+    "category": "Artes Visuais",
+    "subcategory": "Sites",
+    "dateCompleted": "",
+    "description": "Personagem animado estilo 0.5-bit.",
+    "links": [],
+    "media": [],
+    "techStack": [],
+    "conclusion": ""
+  }
+]
