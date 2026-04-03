@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Hackaton EDScript",
+    "description": "Um Hackaton  focado em Análise de dados e Inteligência artificial.",
+    "image": "/img/certifications/certificado_edscript.jpg",
+    "issuer": "Esporte da Sorte",
+    "date": "2026",
+    "techStack": [
+      {
+        "label": "Python",
+        "icon_src": "/img/icons/python.svg"
+      },
+      {
+        "label": "FastAPI",
+        "icon_src": "/img/icons/fastapi.svg"
+      },
+      {
+        "label": "React",
+        "icon_src": "/img/icons/react.svg"
+      },
+      {
+        "label": "Next.js",
+        "icon_src": "/img/icons/nextjs.svg"
+      },
+      {
+        "label": "OpenClaw",
+        "icon_src": "/img/icons/openclaw.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "I Congresso Internacional SPES",
+    "description": "Congresso Internacional SPES: Ciência Aberta, Inteligência Artificial e Sustentabilidade, no Centro de Ciências Sociais e Aplicadas (CCSA).",
+    "image": "/img/certifications/certificado_spes.jpg",
+    "issuer": "Universidade Federal de Pernambuco",
+    "date": "2025",
+    "techStack": [
+      {
+        "label": "Python",
+        "icon_src": "/img/icons/python.svg"
+      },
+      {
+        "label": "FastAPI",
+        "icon_src": "/img/icons/fastapi.svg"
+      },
+      {
+        "label": "React",
+        "icon_src": "/img/icons/react.svg"
+      },
+      {
+        "label": "Next.js",
+        "icon_src": "/img/icons/nextjs.svg"
+      }
+    ]
+  }
+]

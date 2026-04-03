@@ -1,27 +1,29 @@
 import "./globals.css";
 import { Metadata } from "next";
 import { LanguageProvider } from "../context/LanguageContext";
+import { ThemeProvider } from "../context/ThemeContext";
+import { metadata as metadataConfig } from "../lib/metadata";
+import { ScrollToTop } from "../components/scrollToTop";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: metadataConfig.DEFAULT.title,
+    template: "%s | " + metadataConfig.DEFAULT.title,
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: metadataConfig.DEFAULT.description,
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: metadataConfig.DEFAULT.title,
+    description: metadataConfig.DEFAULT.description,
+    url: metadataConfig.DEFAULT.url,
+    siteName: metadataConfig.DEFAULT.title,
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: metadataConfig.DEFAULT.ogImage,
         width: 1920,
         height: 1080,
       },
     ],
-    locale: "en-US",
+    locale: "pt_BR",
     type: "website",
   },
   robots: {
@@ -36,13 +38,16 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: metadataConfig.DEFAULT.title,
     card: "summary_large_image",
   },
   icons: {
     shortcut: "/favicon.png",
   },
+  metadataBase: new URL(metadataConfig.DEFAULT.url),
 };
+
+import { ParticlesBackground } from "../components/particlesBackground";
 
 export default function RootLayout({
   children,
@@ -51,7 +56,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
       <head>
       </head>
 
@@ -59,9 +63,15 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-
-        <LanguageProvider>{children}</LanguageProvider>
-
+        <ThemeProvider>
+          <LanguageProvider>
+            <ParticlesBackground />
+            <ScrollToTop />
+            <div className="relative z-10 w-full min-h-screen">
+              {children}
+            </div>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

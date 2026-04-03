@@ -1,157 +1,162 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Navigation } from "../../components/nav";
-import { CategoryCard } from "@/components/categoryCard";
-import { ProjectCard } from "@/components/projectCard";
-import { ScrollButton } from "@/components/scrollButton";
+import { PortfolioCard } from "@/components/portfolioCard";
+import { SearchFilter } from "@/components/searchFilter";
 import projects from "../../../data/projects.json";
-import { ProjectDetails } from "@/components/projectDetails";
-
-type Category = {
-  title: string;
-  subcategories: string[];
-};
-
-const categories: Category[] = [
-  { title: "Programação", subcategories: ["Sites", "IA", "Jogos"] },
-  { title: "Artes Visuais", subcategories: ["Pixel Art (64x64)", "Pixel Art (32x32)", "Pixel Art (outras)"] },
-];
+import { Project } from "@/types/project";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Projects() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const { t } = useTranslation();
 
-  const projectsContainerRef = useRef<HTMLDivElement>(null);
-  const [activeCategory, setActiveCategory] = useState<string | null>(categories[0].title);
-  const [activeSub, setActiveSub] = useState<string | null>(categories[0].subcategories[0]);
-  const [activeProject, setActiveProject] = useState<number | null>(null);
-
-  const handleCategoryClick = (category: string) => {
-    setActiveCategory(category);
-  };
-
-  const handleSubCategoryClick = (subCategory: string) => {
-    setActiveSub(subCategory);
-  };
-
-  const handleProjectCardClick = (projectId: number) => {
-    setActiveProject(projectId);
-  };
-
-  const visibleProjects = projects.filter(
-    (p) => p.subcategory === activeSub
-  );
-
-  const scrollProjects = (direction: "left" | "right") => {
-    if (!projectsContainerRef.current) return;
-
-    const firstCard = projectsContainerRef.current.firstChild as HTMLElement;
-    const cardWidth = firstCard ? firstCard.clientWidth + 16 : 0; // 16 = gap
-
-    projectsContainerRef.current.scrollBy({
-      left: direction === "right" ? cardWidth : -cardWidth,
-      behavior: "smooth",
+  // Extrair todas as tecnologias únicas
+  const allTechs = useMemo(() => {
+    const techSet = new Set<string>();
+    projects.forEach((p) => {
+      p.techStack.forEach((tech) => {
+        techSet.add(tech.label);
+      });
     });
+    return Array.from(techSet).sort();
+  }, []);
+
+  // Extrair subcategorias únicas (macro-filtros mobile)
+  const allCategories = useMemo(() => {
+    const catSet = new Set<string>();
+    projects.forEach((p) => { if (p.subcategory) catSet.add(p.subcategory); });
+    return Array.from(catSet).sort();
+  }, []);
+
+  // Filtrar projetos
+  const filteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      const transDesc = t(`projectsData.${project.id}.description`) !== `projectsData.${project.id}.description`
+        ? t(`projectsData.${project.id}.description`)
+        : project.description;
+
+      const subcatKey = `tags.${project.subcategory}`;
+      const transSubcat = t(subcatKey) !== subcatKey ? t(subcatKey) : project.subcategory;
+
+      const searchLower = searchTerm.toLowerCase();
+      const matchesSearch =
+        project.title.toLowerCase().includes(searchLower) ||
+        transDesc.toLowerCase().includes(searchLower) ||
+        transSubcat.toLowerCase().includes(searchLower);
+
+      const matchesTech =
+        selectedTechs.length === 0 ||
+        selectedTechs.some((tech) =>
+          project.techStack.some((t) => t.label === tech)
+        );
+
+      const matchesCategory =
+        selectedCategory === null || project.subcategory === selectedCategory;
+
+      return matchesSearch && matchesTech && matchesCategory;
+    });
+  }, [searchTerm, selectedTechs, selectedCategory]);
+
+  const handleTechToggle = (tech: string) => {
+    setSelectedTechs((prev) =>
+      prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech]
+    );
   };
-  
+
   return (
-    <div className="bg-linear-to-tl from-black via-zinc-600/20 to-black bg-fixed flex flex-col items-center justify-center w-screen min-h-screen">
-      
+    <div className="bg-linear-to-tl from-black via-zinc-600/20 to-black bg-fixed min-h-screen">
       <Navigation />
 
-      {/* Lista de categorias */}
-      <div className="flex flex-row justify-center gap-y-4 mb-8 w-full ">
-
-        {categories.map((cat) => (
-          
-          <CategoryCard 
-            title={cat.title} 
-            onClick={() => {
-              handleCategoryClick(cat.title);
-              handleSubCategoryClick(cat.subcategories[0]);  
-            }} 
-            isActive={activeCategory === cat.title}
-          >
-          </CategoryCard>
-
-        ))}
-      </div>
-
-      {/* Subcards “spawnados” abaixo da categoria ativa */}
-      {activeCategory && (
-        <div className="flex flex-row justify-center gap-y-4 mt-2 w-full">
-          {categories
-            .find((category) => category.title === activeCategory)
-            ?.subcategories.map((sub) => (
-
-              <CategoryCard 
-                title={sub} 
-                onClick={() => handleSubCategoryClick(sub)}
-                isActive={activeSub === sub} 
-                >
-              </CategoryCard>
-              
-            ))}
-        </div>
-      )}
-
-
-
-
-      {/* Área de conteúdo (mostra a subcategoria selecionada) */}
-      {activeCategory && activeSub && (
-        <div className="mt-4 p-4 border border-zinc-700 rounded-lg text-zinc-300 max-w-11/12 mx-auto">
-          
-          <strong>{activeCategory} / {activeSub}</strong>
-          
-          <p className="mt-2 text-sm text-zinc-400">
-            Aqui entraria a lista de projetos dessa subcategoria.
+      <div className="container mx-auto px-4 py-16">
+        {/* Título */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            {t("projects.title")}
+          </h1>
+          <p className="text-xl text-zinc-400">
+            {t("projects.subtitle")}
           </p>
+        </motion.div>
 
-          {/* Controles de scroll com ícones */}
-          <div className="flex items-center justify-center gap-2 mt-2">
+        {/* Barra de Busca e Filtros */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <SearchFilter
+            searchTerm={searchTerm}
+            onSearchChange={setSearchTerm}
+            technologies={selectedTechs}
+            selectedTechs={selectedTechs}
+            onTechToggle={handleTechToggle}
+            allTechs={allTechs}
+            allCategories={allCategories}
+            selectedCategory={selectedCategory}
+            onCategorySelect={setSelectedCategory}
+          />
+        </motion.div>
 
-            {visibleProjects.length > 6 && (
-              <ScrollButton direction="left" onClick={() => scrollProjects("left")} ></ScrollButton>
-            )}
-
-            <div
-              ref={projectsContainerRef}
-              className="overflow-hidden flex flex-row gap-2"
-            >
-              {visibleProjects.map((p) => (
-                <ProjectCard
-                  project={p}
-                  isActive={activeProject === p.id}
-                  onClick={() => handleProjectCardClick(p.id)}
-                />
+        {/* Grid de Projetos */}
+        {filteredProjects.length > 0 ? (
+          <motion.div
+            layout
+            className="grid grid-cols-3 lg:grid-cols-3 gap-2 md:gap-6"
+          >
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project, idx) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.92, y: 16 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.88, y: -8 }}
+                  transition={{ duration: 0.25, delay: idx * 0.04 }}
+                >
+                  <PortfolioCard project={project as Project} />
+                </motion.div>
               ))}
-            </div>
+            </AnimatePresence>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-16"
+          >
+            <p className="text-xl text-zinc-400 mb-4">
+              {t("projects.notFound")}
+            </p>
+            <p className="text-zinc-500">
+              {t("projects.tryAdjust")}
+            </p>
+          </motion.div>
+        )}
 
-            {visibleProjects.length > 6 && (
-              <ScrollButton direction="right" onClick={() => scrollProjects("right")} ></ScrollButton>
-            )}
-            
-          </div>
-
-          <div className="w-full h-px bg-linear-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 m-4" />
-
-          <ProjectDetails project={visibleProjects.find(p => p.id === activeProject)!} ></ProjectDetails>
-
-        </div>
-      )}
-
-
-
-
-
-
-
-
-
-      <div className="w-screen h-px animate-glow animate-fade-left bg-linear-to-r" />
-
-      <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-linear-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-
+        {/* Info de Resultados */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12 text-zinc-400"
+        >
+          {filteredProjects.length > 0 && (
+            <p>
+              {t("projects.showing")} {filteredProjects.length} {t("projects.of")} {projects.length} {t("projects.projectsWord")}
+            </p>
+          )}
+        </motion.div>
+      </div>
     </div>
   );
 }

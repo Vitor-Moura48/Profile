@@ -1,12 +1,163 @@
 [
   {
+    "id": 5,
+    "thumbnail": "/img/projects/oxitech/oxitech_01.png",
+    "title": "Oxitech",
+    "category": "Programação",
+    "subcategory": "Sites",
+    "dateCompleted": "06/2025",
+    "description": "Um sistema para otimizar o armazenamento e a localização de cilindros de oxigênio em ambientes hospitalares, com o intuito de aumentar a eficiência operacional e garantir a segurança, promovendo um ambiente mais organizado e seguro para os profissionais de saúde e pacientes.",
+    "links": [{
+      "type": "github",
+      "url": "https://github.com/Vitor-Moura48/oxitech"
+    }],
+    "media": [{
+        "type": "image",
+        "src": "/img/projects/oxitech/oxitech_01.png",
+        "caption": ""
+    },
+    {
+          "type": "image",
+          "src": "/img/projects/oxitech/oxitech_02.png",
+          "caption": ""
+      }],
+    "techStack": [{
+        "label": "Python",
+        "icon_src": "/img/icons/Python.svg"
+    }, {
+        "label": "FastAPI",
+        "icon_src": "/img/icons/FastAPI.svg"
+    }, {
+        "label": "React",
+        "icon_src": "/img/icons/React.svg"
+    }, {
+        "label": "Next.js",
+        "icon_src": "/img/icons/Nextjs.svg"
+    }, {
+        "label": "Supabase",
+        "icon_src": "/img/icons/Supabase.svg"
+    }],
+    "conclusion": "Esse foi um projeto desenvolvido como parte de um projeto de Iniciação Científica, desenvolvido inicialmente para o hospital Maria Lucinda, no Recife."
+  },
+
+  {
+    "id": 4,
+    "thumbnail": "/img/projects/celebrai/celebrai_01.png",
+    "title": "Celebraí",
+    "category": "Programação",
+    "subcategory": "Sites",
+    "dateCompleted": "11/2025",
+    "description": "Uma plataforma web que integra fornecedores de kits de festas com pessoas em busca desses produtos.",
+    "links": [{
+      "type": "github",
+      "url": "https://github.com/Vitor-Moura48/celebrai-frontend"
+    }],
+    "media": [{
+        "type": "image",
+        "src": "/img/projects/celebrai/celebrai_01.png",
+        "caption": ""
+    }],
+    "techStack": [{
+        "label": "React",
+        "icon_src": "/img/icons/React.svg"
+    }, {
+        "label": "C#",
+        "icon_src": "/img/icons/CSharp.svg"
+    }, {
+        "label": "Next.js",
+        "icon_src": "/img/icons/Nextjs.svg"
+    }, {
+        "label": "SQL Server",
+        "icon_src": "/img/icons/SQLServer.svg"
+    }],
+    "conclusion": "Esse foi um projeto desenvolvido como parte de um projeto de Experiência Extensionista. Atuei desde a fase de ideação e modelagem de dados até o desenvolvimento do backend."
+  },
+
+  {
+    "id": 6,
+    "thumbnail": "/img/projects/techfusion_corp/techfusion_corp_01.png",
+    "title": "TechFusion Corp",
+    "category": "Programação",
+    "subcategory": "Infraestrutura",
+    "dateCompleted": "06/2025",
+    "description": " Implementação de uma infraestrutura de nuvem. A solução adota uma estratégia Multicloud (AWS + Azure) gerenciada via Terraform, visando alta disponibilidade, resiliência a desastres e segurança.",
+    "links": [],
+    "media": [{
+        "type": "image",
+        "src": "/img/projects/techfusion_corp/techfusion_corp_01.png",
+        "caption": ""
+    }],
+    "techStack": [{
+        "label": "Terraform",
+        "icon_src": "/img/icons/Terraform.svg"
+    }, {
+        "label": "AWS",
+        "icon_src": "/img/icons/AWS.svg"
+    }, {
+        "label": "Azure",
+        "icon_src": "/img/icons/Azure.svg"
+    }, {
+        "label": "Azure DevOps",
+        "icon_src": "/img/icons/AzureDevOps.svg"
+    }, {
+        "label": "Azure Key Vault",
+        "icon_src": "/img/icons/AzureKeyVaults.svg"
+    }],
+    "conclusion": "O ambiente opera em modelo Ativo-Passivo (Failover), onde a AWS processa a carga principal e a Azure atua como contingência imediata."
+  },
+
+  {
+    "id": 7,
+    "thumbnail": "/img/projects/dream_stage/dream_stage_01.png",
+    "title": "DreamStage",
+    "category": "Programação",
+    "subcategory": "IA",
+    "dateCompleted": "Em desenvolvimento",
+    "description": "Projeto para classificação de estágios do sono, através de espectrogramas gerados a partir de sinais eeg, utilizando scikit-learn para treinamento e classificação.",
+    "links": [{
+      "type": "github",
+      "url": "https://github.com/Vitor-Moura48/Rem"
+    }],
+    "media": [{
+        "type": "image",
+        "src": "/img/projects/dream_stage/dream_stage_01.png",
+        "caption": ""
+    }, {
+        "type": "image",
+        "src": "/img/projects/dream_stage/dream_stage_02.png",
+        "caption": "Espectrograma de Sono Profundo"
+    }, {
+        "type": "image",
+        "src": "/img/projects/dream_stage/dream_stage_03.png",
+        "caption": "Espectrograma de Sono REM"
+    }],
+    "techStack": [{
+        "label": "Python",
+        "icon_src": "/img/icons/Python.svg"
+    }, {
+        "label": "Scikit-learn",
+        "icon_src": "/img/icons/ScikitLearn.svg"
+    }, {
+        "label": "MNE",
+        "icon_src": "/img/icons/MNE.svg"
+    }, {
+        "label": "Matplotlib",
+        "icon_src": "/img/icons/Matplotlib.svg"
+    }, {
+        "label": "NumPy",
+        "icon_src": "/img/icons/NumPy.svg"
+    }],
+    "conclusion": "O objetivo é desenvolver um algoritmo capaz de classificar os estágios do sono a partir de sinais de EEG."
+  },
+
+  {
     "id": 1,
-    "thumbnail": "/img/rune.png",
+    "thumbnail": "/img/projects/foguete_ia/foguete_ia_01.png",
     "title": "FogueteIa",
     "category": "Programação",
     "subcategory": "IA",
-    "dateCompleted": "06/06/2024",
-    "description": "Este projeto foca na criação de um agente inteligente usando redes neurais, implementadas com PyTorch e NumPy, para controlar autonomamente um foguete. Em um ambiente simulado, o agente aprende a navegar por pontos específicos e realizar pousos seguros. A otimização do agente é feita através de um algoritmo genético, permitindo a experimentação com arquiteturas de rede neural, funções de ativação e parâmetros de seleção para um desempenho adaptativo.",
+    "dateCompleted": "06/2024",
+    "description": "Este projeto foca na criação de um agente inteligente usando redes neurais, implementadas com PyTorch e NumPy, para controlar autonomamente um foguete. Em um ambiente simulado, o agente aprende a navegar por pontos específicos e realizar pousos seguros. A otimização do agente é feita através de um algoritmo genético, com a possibilidade de experimentar arquiteturas de rede neural, funções de ativação e parâmetros de seleção.",
     "links": [{
       "type": "github",
       "url": "https://github.com/Vitor-Moura48/FogueteIA",
@@ -14,135 +165,118 @@
     }],
     "media": [{
         "type": "image",
-        "src": "/img/foguete_ia/foguete_ia_01.png",
-        "caption": "Foguete em voo no ambiente simulado."
-        }, {
-        "type": "image",
-        "src": "/img/foguete_ia/foguete_ia_02.png",
+        "src": "/img/projects/foguete_ia/foguete_ia_01.png",
         "caption": ""
         }, {
         "type": "image",
-        "src": "/img/foguete_ia/foguete_ia_03.png",
-        "caption": "Foguete realizando um pouso suave."
+        "src": "/img/projects/foguete_ia/foguete_ia_02.png",
+        "caption": ""
         }, {
         "type": "image",
-        "src": "/img/foguete_ia/foguete_ia_04.png",
-        "caption": "Evolução do desempenho do agente ao longo das gerações."
+        "src": "/img/projects/foguete_ia/foguete_ia_03.png",
+        "caption": ""
+        }, {
+        "type": "image",
+        "src": "/img/projects/foguete_ia/foguete_ia_04.png",
+        "caption": ""
     }],
     "techStack": [{
         "label": "PyTorch",
-        "icon_src": "/img/icons/python-logo-only.svg"
+        "icon_src": "/img/icons/Python.svg"
         }, {
         "label": "NumPy",
-        "icon_src": "/img/icons/numpy-svgrepo-com.svg"
+        "icon_src": "/img/icons/NumPy.svg"
         }, {
         "label": "Pygame",
-        "icon_src": "/img/icons/download.png"
+        "icon_src": "/img/icons/Pygame.png"
     }],
-    "conclusion": "Este projeto demonstrou a eficácia dos algoritmos genéticos na otimização de redes neurais para controle robótico complexo. A capacidade de experimentar diversas arquiteturas e estratégias evolutivas abriu caminhos para entender como a IA pode aprender e se adaptar em ambientes dinâmicos, culminando em um agente de foguete capaz de navegação e pouso autônomos."
-  },
-  {
-    "id": 2,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto B",
-    "category": "Artes Visuais",
-    "subcategory": "Jogos",
-    "dateCompleted": "",
-    "description": "Cenário montanhoso em pixel art.",
-    "links": [],
-    "media": [],
-    "techStack": [],
     "conclusion": ""
   },
+  
   {
     "id": 3,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto C",
-    "category": "Artes Visuais",
+    "thumbnail": "/img/projects/emprega_social/emprega_social_01.png",
+    "title": "Emprega Social",
+    "category": "Programação",
     "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 16-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
+    "dateCompleted": "03/2024",
+    "description": "O Emprega Social é uma plataforma web que funciona como uma agência de emprego com foco no social, conectando demandas de trabalho de empresas e órgãos públicos com pessoas em busca de emprego, priorizando e qualificando grupos sociais vulneráveis, como jovens em seu primeiro emprego ou em situação de risco, pessoas com deficiência e mulheres vítimas de violência.",
+    "links": [{
+      "type": "github",
+      "url": "https://github.com/Samuel-Duque/emprega-social"
+    }],
+    "media": [{
+        "type": "image",
+        "src": "/img/projects/emprega_social/emprega_social_01.png",
+        "caption": ""
+    }, {
+        "type": "image",
+        "src": "/img/projects/emprega_social/emprega_social_02.png",
+        "caption": ""
+    }, {
+        "type": "image",
+        "src": "/img/projects/emprega_social/emprega_social_03.png",
+        "caption": ""
+    }, {
+        "type": "image",
+        "src": "/img/projects/emprega_social/emprega_social_04.png",
+        "caption": ""
+    }],
+    "techStack": [{
+        "label": "Angular",
+        "icon_src": "/img/icons/Angular.png"
+    }, {
+        "label": "Python",
+        "icon_src": "/img/icons/Python.svg"
+    }, {
+        "label": "FastAPI",
+        "icon_src": "/img/icons/FastAPI.svg"
+    }, {
+        "label": "Supabase",
+        "icon_src": "/img/icons/Supabase.svg"
+    }],
+    "conclusion": "Esse foi um projeto desenvolvido em equipe, em parceiria com o Porto Digital e a prefeitura municipal de Igarassu como parte da Residência Tecnológica. Uma vivência prática que me ajudou a aprender mais sobre modelagem de dados e desenvolvimento backend."
   },
+
   {
-    "id": 4,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto D",
-    "category": "Artes Visuais",
-    "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 32-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
-  },
-  {
-    "id": 5,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto E",
-    "category": "Artes Visuais",
-    "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 8-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
-  },
-  {
-    "id": 6,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto F",
-    "category": "Artes Visuais",
-    "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 4-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
-  },
-  {
-    "id": 7,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto G",
-    "category": "Artes Visuais",
-    "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 2-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
-  },
-  {
-    "id": 8,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto H",
-    "category": "Artes Visuais",
-    "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 1-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
-  },
-  {
-    "id": 9,
-    "thumbnail": "/img/rune.png",
-    "title": "Projeto I",
-    "category": "Artes Visuais",
-    "subcategory": "Sites",
-    "dateCompleted": "",
-    "description": "Personagem animado estilo 0.5-bit.",
-    "links": [],
-    "media": [],
-    "techStack": [],
-    "conclusion": ""
+    "id": 2,
+    "thumbnail": "/img/projects/castelo_arcano/castelo_arcano_01.png",
+    "title": "Castelo Arcano",
+    "category": "Programação",
+    "subcategory": "Jogos",
+    "dateCompleted": "05/2024",
+    "description": "Um jogo onde seu objetivo é defender sua base contra ameaças constantes, e para isso, você deve superar uma variedade de desafios e obstáculos, contando com diversos buffs e power-ups disponíveis para garantir a segurança do seu território.",
+    "links": [{
+      "type": "github",
+      "url": "https://github.com/Vitor-Moura48/Castelo-Arcano"
+    }],
+    "media": [ {
+        "type": "image",
+        "src": "/img/projects/castelo_arcano/castelo_arcano_01.png",
+        "caption": ""
+        }, {
+        "type": "image",
+        "src": "/img/projects/castelo_arcano/castelo_arcano_02.png",
+        "caption": ""
+        }, {
+        "type": "image",
+        "src": "/img/projects/castelo_arcano/castelo_arcano_03.png",
+        "caption": ""
+      }],
+    "techStack": [{
+        "label": "Python",
+        "icon_src": "/img/icons/Python.svg"
+      }, {
+        "label": "Pygame",
+        "icon_src": "/img/icons/Pygame.png"
+    }, {
+        "label": "Pandas",
+        "icon_src": "/img/icons/Pandas.svg"
+    }, {
+        "label": "PyInstaller",
+        "icon_src": "/img/icons/PyInstaller.png"
+    }],
+    "conclusion": "Este foi o primeiro jogo com interface visual que desenvolvi. Ele foi muito útil para praticar os conceitos básicos de orientação a objetos na época, além de aprender a desenvolver o primeiro sistema de save e testar a criação de executáveis com PyInstaller."
   }
+
 ]

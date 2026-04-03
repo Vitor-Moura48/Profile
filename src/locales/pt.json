@@ -5,14 +5,111 @@
     "contact": "Contato"
   },
   "home": {
-    "title": "Olá, eu sou Gabriel",
-    "description": "Desenvolvedor Full Stack"
+    "title": "Olá, eu sou Vitor Moura",
+    "description": "Desenvolvedor Full Stack",
+    "bio": "Desenvolvedor apaixonado por criar soluções inovadoras com tecnologias modernas. De aplicações web até sistemas de IA."
+  },
+  "cta": {
+    "projects": "Explorar Projetos",
+    "contact": "Entrar em Contato"
+  },
+  "stats": {
+    "projects": "Projetos Completos",
+    "experience": "Anos de Experiência",
+    "technologies": "Tecnologias Principais"
+  },
+  "techStack": {
+    "title": "Stack de Tecnologias"
+  },
+  "github": {
+    "subtitle": "Acompanhe meus projetos e contribuições em tempo real",
+    "contributions": "Contribuições",
+    "stars": "Stars Totais",
+    "topLanguage": "Linguagem Principal",
+    "visit": "Visitar GitHub",
+    "error": "⚠️ Não foi possível carregar dados do GitHub"
+  },
+  "certifications": {
+    "title": "Certificações",
+    "expand": "Expandir"
+  },
+  "featured": {
+    "title": "Projetos em Destaque",
+    "subtitle": "Conheça alguns dos meus trabalhos"
   },
   "projects": {
     "title": "Meus Projetos",
-    "viewMore": "Ver mais"
+    "subtitle": "Explore meu portfólio de projetos e descubra o que construí",
+    "viewMore": "Ver mais",
+    "search": "Buscar projetos por nome, descrição...",
+    "filterBy": "Filtrar por tecnologia:",
+    "notFound": "Nenhum projeto encontrado",
+    "tryAdjust": "Tente ajustar seus filtros de busca ou tecnologia",
+    "gallery": "Galeria",
+    "stack": "Stack de Tecnologias",
+    "conclusion": "Conclusão",
+    "expand": "Expandir",
+    "showing": "Mostrando",
+    "of": "de",
+    "projectsWord": "projetos"
   },
   "contact": {
-    "description": "Ficou interessado em algum projeto ou quer criar algo novo? Vamos conversar."
+    "description": "Ficou interessado em algum projeto ou quer criar algo novo? Vamos conversar.",
+    "socials": "Ou conecte-se comigo através das redes sociais",
+    "copyEmail": "Copiar email",
+    "openGmail": "Abrir Gmail",
+    "emailCopied": "Email copiado! ✓",
+    "name": "Seu Nome",
+    "email": "seu.email@exemplo.com",
+    "message": "Fale sobre seu projeto, faça uma pergunta ou apenas diga olá...",
+    "send": "Enviar mensagem",
+    "sending": "Enviando...",
+    "sent": "Mensagem enviada!",
+    "retry": "Tente novamente",
+    "success": "✓ Obrigado pelo contato! Vou responder em breve.",
+    "error": "Erro ao enviar mensagem. Tente novamente.",
+    "connectionError": "Erro de conexão. Verifique sua internet."
+  },
+  "certificationsData": {
+    "1": "Um Hackaton  focado em Análise de dados e Inteligência artificial.",
+    "2": "Congresso Internacional SPES: Ciência Aberta, Inteligência Artificial e Sustentabilidade, no Centro de Ciências Sociais e Aplicadas (CCSA)."
+  },
+  "projectsData": {
+    "1": {
+      "description": "Este projeto foca na criação de um agente inteligente usando redes neurais, implementadas com PyTorch e NumPy, para controlar autonomamente um foguete. Em um ambiente simulado, o agente aprende a navegar por pontos específicos e realizar pousos seguros. A otimização do agente é feita através de um algoritmo genético, com a possibilidade de experimentar arquiteturas de rede neural, funções de ativação e parâmetros de seleção.",
+      "conclusion": ""
+    },
+    "2": {
+      "description": "Um jogo onde seu objetivo é defender sua base contra ameaças constantes, e para isso, você deve superar uma variedade de desafios e obstáculos, contando com diversos buffs e power-ups disponíveis para garantir a segurança do seu território.",
+      "conclusion": "Este foi o primeiro jogo com interface visual que desenvolvi. Ele foi muito útil para praticar os conceitos básicos de orientação a objetos na época, além de aprender a desenvolver o primeiro sistema de save e testar a criação de executáveis com PyInstaller."
+    },
+    "3": {
+      "description": "O Emprega Social é uma plataforma web que funciona como uma agência de emprego com foco no social, conectando demandas de trabalho de empresas e órgãos públicos com pessoas em busca de emprego, priorizando e qualificando grupos sociais vulneráveis, como jovens em seu primeiro emprego ou em situação de risco, pessoas com deficiência e mulheres vítimas de violência.",
+      "conclusion": "Esse foi um projeto desenvolvido em equipe, em parceiria com o Porto Digital e a prefeitura municipal de Igarassu como parte da Residência Tecnológica. Uma vivência prática que me ajudou a aprender mais sobre modelagem de dados e desenvolvimento backend."
+    },
+    "4": {
+      "description": "Uma plataforma web que integra fornecedores de kits de festas com pessoas em busca desses produtos.",
+      "conclusion": "Esse foi um projeto desenvolvido como parte de um projeto de Experiência Extensionista. Atuei desde a fase de ideação e modelagem de dados até o desenvolvimento do backend."
+    },
+    "5": {
+      "description": "Um sistema para otimizar o armazenamento e a localização de cilindros de oxigênio em ambientes hospitalares, com o intuito de aumentar a eficiência operacional e garantir a segurança, promovendo um ambiente mais organizado e seguro para os profissionais de saúde e pacientes.",
+      "conclusion": "Esse foi um projeto desenvolvido como parte de um projeto de Iniciação Científica, desenvolvido inicialmente para o hospital Maria Lucinda, no Recife."
+    },
+    "6": {
+      "description": " Implementação de uma infraestrutura de nuvem. A solução adota uma estratégia Multicloud (AWS + Azure) gerenciada via Terraform, visando alta disponibilidade, resiliência a desastres e segurança.",
+      "conclusion": "O ambiente opera em modelo Ativo-Passivo (Failover), onde a AWS processa a carga principal e a Azure atua como contingência imediata."
+    },
+    "7": {
+      "description": "Projeto para classificação de estágios do sono, através de espectrogramas gerados a partir de sinais eeg, utilizando scikit-learn para treinamento e classificação.",
+      "conclusion": "O objetivo é desenvolver um algoritmo capaz de classificar os estágios do sono a partir de sinais de EEG."
+    }
+  },
+  "tags": {
+    "Programação": "Programação",
+    "Sites": "Sites",
+    "Infraestrutura": "Infraestrutura",
+    "IA": "IA",
+    "Jogos": "Jogos",
+    "Em desenvolvimento": "Em desenvolvimento"
   }
 }

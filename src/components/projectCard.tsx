@@ -26,7 +26,7 @@ export const ProjectCard = (
       <img
         src={project.thumbnail}
         alt={project.title}
-        className="w-full h-32 object-contain bg-zinc-800"
+        className="w-full h-32 object-cover rounded-lg bg-zinc-800"
       />
 
       <div className="p-2 text-sm font-medium text-zinc-300">

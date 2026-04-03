@@ -5,6 +5,7 @@ import React from 'react';
 import Image from 'next/image'; // Para otimização de imagens do Next.js
 import { Github, Link as LinkIcon, ExternalLink } from 'lucide-react'; // Ícones para links
 import { Project } from '../types/project';
+import { useState } from 'react';
 
 // --- Subcomponentes (simplificados para o exemplo, você pode expandi-los) ---
 
@@ -18,7 +19,7 @@ const ProjectHeader = (
 
     <header className="mb-8">
 
-      <h1 className="text-4xl md:text-5xl font-extrabold text-blue-400 mb-3">{project.title}</h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 py-2 text-transparent duration-1000 cursor-default bg-clip-text bg-linear-to-r from-blue-400 to-pink-600">{project.title}</h1>
 
       <p className="text-lg text-gray-400 mb-4">
         <span className="font-semibold">{project.category}</span> / {project.subcategory}
@@ -71,6 +72,8 @@ const MediaGallery = (
     { media }:
     { media: Project['media'] }
   ) => {
+
+  const [selectedMedia, setSelectedMedia] = useState<{ src: string; isGif: boolean; } | null>(null);
     
   if (!media || media.length === 0) return null;
 
@@ -87,6 +90,7 @@ const MediaGallery = (
 
             {item.type === 'image' || item.type === 'gif' ? (
               <div className="relative w-full aspect-video"> {/* Ajusta a proporção para 16:9 */}
+   
                 <Image
                   src={item.src}
                   alt=""
@@ -95,6 +99,7 @@ const MediaGallery = (
                   className="rounded-t-lg"
                   unoptimized={item.type === 'gif'} // GIFs geralmente não são otimizados pelo Next/image
                 />
+
               </div>
 
             ) : item.type === 'video' ? (

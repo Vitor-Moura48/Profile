@@ -23,7 +23,8 @@ export const Navigation = ( {showback = true }: {showback?: boolean} ) => {
     const { t } = useTranslation();
  
     const toggleLang = () => {
-        setLang((prev: Lang): Lang => prev === "en" ? "pt" : "en");
+        const newLang: Lang = lang === "en" ? "pt" : "en";
+        setLang(newLang);
     };
 
 	useEffect(() => {
@@ -45,11 +46,11 @@ export const Navigation = ( {showback = true }: {showback?: boolean} ) => {
 						: "bg-zinc-900/500  border-zinc-800 "
 				}`}
 			>
-				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+				<div className="container flex flex-row-reverse items-center justify-between p-4 sm:p-6 mx-auto">
 				
                     {/* Barra de links */}
                     <nav>
-                        <ul className="flex items-center justify-center gap-4 animate-fade-in">
+                        <ul className="flex items-center justify-center gap-2 sm:gap-4 animate-fade-in text-sm sm:text-base">
                             
                         {navigation.map((item) => (        
                             <Link
@@ -78,14 +79,14 @@ export const Navigation = ( {showback = true }: {showback?: boolean} ) => {
                             href="/"
                             className="duration-200 text-zinc-300 hover:text-zinc-100"
                         >
-                            <ArrowLeft className="w-6 h-6 " />
+                            <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                         </Link>
                     )}
 
 				</div>
 			</div>
 
-            <div className="h-24" ></div>
+            <div className="h-16 md:h-24" ></div>
 
 		</header>
 	);

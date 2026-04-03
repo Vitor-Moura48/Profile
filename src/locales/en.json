@@ -5,14 +5,111 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Hi, I am Gabriel",
-    "description": "Full Stack Developer"
+    "title": "Hi, I am Vitor Moura",
+    "description": "Full Stack Developer",
+    "bio": "Passionate developer creating innovative solutions with modern technologies. From web applications to AI systems."
+  },
+  "cta": {
+    "projects": "Explore Projects",
+    "contact": "Get in Touch"
+  },
+  "stats": {
+    "projects": "Completed Projects",
+    "experience": "Years of Experience",
+    "technologies": "Core Technologies"
+  },
+  "techStack": {
+    "title": "Technology Stack"
+  },
+  "github": {
+    "subtitle": "Follow my projects and contributions in real time",
+    "contributions": "Contributions",
+    "stars": "Total Stars",
+    "topLanguage": "Top Language",
+    "visit": "Visit GitHub",
+    "error": "⚠️ Could not load GitHub data"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "expand": "Expand"
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Explore some of my work"
   },
   "projects": {
     "title": "My Projects",
-    "viewMore": "View More"
+    "subtitle": "Explore my portfolio and discover what I've built",
+    "viewMore": "View More",
+    "search": "Search projects by name, description...",
+    "filterBy": "Filter by technology:",
+    "notFound": "No projects found",
+    "tryAdjust": "Try adjusting your search or technology filters",
+    "gallery": "Gallery",
+    "stack": "Technology Stack",
+    "conclusion": "Conclusion",
+    "expand": "Expand",
+    "showing": "Showing",
+    "of": "of",
+    "projectsWord": "projects"
   },
   "contact": {
-    "description": "Interested in a project or want to create something new? Let’s talk."
+    "description": "Interested in a project or want to create something new? Let's talk.",
+    "socials": "Or connect with me through social media",
+    "copyEmail": "Copy email",
+    "openGmail": "Open Gmail",
+    "emailCopied": "Email copied! ✓",
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "message": "Tell me about your project, ask a question, or just say hello...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "sent": "Message sent!",
+    "retry": "Try again",
+    "success": "✓ Thank you for reaching out! I'll get back to you soon.",
+    "error": "Error sending message. Please try again.",
+    "connectionError": "Connection error. Check your internet."
+  },
+  "certificationsData": {
+    "1": "A Hackathon focused on Data Analysis and Artificial Intelligence.",
+    "2": "SPES International Congress: Open Science, Artificial Intelligence and Sustainability, at the Center for Applied Social Sciences (CCSA)."
+  },
+  "projectsData": {
+    "1": {
+      "description": "This project focuses on creating an intelligent agent using neural networks, implemented with PyTorch and NumPy, to autonomously control a rocket. In a simulated environment, the agent learns to navigate specific points and perform safe landings. The agent's optimization is done through a genetic algorithm, with the possibility to experiment with neural network architectures, activation functions, and selection parameters.",
+      "conclusion": ""
+    },
+    "2": {
+      "description": "A game where your goal is to defend your base against constant threats, and for that, you must overcome a variety of challenges and obstacles, counting on various buffs and power-ups available to ensure the safety of your territory.",
+      "conclusion": "This was the first game with a visual interface that I developed. It was very useful to practice basic object-oriented concepts at the time, in addition to learning to develop my first save system and testing the creation of executables with PyInstaller."
+    },
+    "3": {
+      "description": "Emprega Social is a web platform that functions as a socially focused employment agency, connecting work demands from companies and public agencies with job seekers, prioritizing and qualifying vulnerable social groups, such as young people in their first job or at-risk situations, people with disabilities, and women victims of violence.",
+      "conclusion": "This was a team project developed in partnership with Porto Digital and the municipality of Igarassu as part of the Technological Residency. A practical experience that helped me learn more about data modeling and backend development."
+    },
+    "4": {
+      "description": "A web platform that integrates party kit suppliers with people looking for these products.",
+      "conclusion": "This was a project developed as part of an Extensionist Experience project. I worked from the ideation and data modeling phase to backend development."
+    },
+    "5": {
+      "description": "A system to optimize the storage and location of oxygen cylinders in hospital environments, aiming to increase operational efficiency and ensure safety, promoting a more organized and safe environment for healthcare professionals and patients.",
+      "conclusion": "This was a project developed as part of a Scientific Initiation project, initially developed for the Maria Lucinda hospital in Recife."
+    },
+    "6": {
+      "description": "Implementation of a cloud infrastructure. The solution adopts a Multicloud strategy (AWS + Azure) managed via Terraform, aiming for high availability, disaster resilience, and security.",
+      "conclusion": "The environment operates in an Active-Passive (Failover) model, where AWS processes the main load and Azure acts as immediate contingency."
+    },
+    "7": {
+      "description": "Project for classifying sleep stages through spectrograms generated from EEG signals, using scikit-learn for training and classification.",
+      "conclusion": "The goal is to develop an algorithm capable of classifying sleep stages from EEG signals."
+    }
+  },
+  "tags": {
+    "Programação": "Programming",
+    "Sites": "Websites",
+    "Infraestrutura": "Infrastructure",
+    "IA": "AI",
+    "Jogos": "Games",
+    "Em desenvolvimento": "In development"
   }
 }
