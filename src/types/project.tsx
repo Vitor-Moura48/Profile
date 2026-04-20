@@ -1,6 +1,5 @@
 export type Project = {
   id: number;
-  thumbnail: string; // Para o ícone na lista de projetos
   title: string;
   category: string;
   subcategory: string;

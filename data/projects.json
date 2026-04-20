@@ -1,7 +1,6 @@
 [
   {
     "id": 5,
-    "thumbnail": "/img/projects/oxitech/oxitech_01.png",
     "title": "Oxitech",
     "category": "Programação",
     "subcategory": "Sites",
@@ -42,7 +41,6 @@
 
   {
     "id": 4,
-    "thumbnail": "/img/projects/celebrai/celebrai_01.png",
     "title": "Celebraí",
     "category": "Programação",
     "subcategory": "Sites",
@@ -75,7 +73,6 @@
 
   {
     "id": 6,
-    "thumbnail": "/img/projects/techfusion_corp/techfusion_corp_01.png",
     "title": "TechFusion Corp",
     "category": "Programação",
     "subcategory": "Infraestrutura",
@@ -108,7 +105,6 @@
 
   {
     "id": 7,
-    "thumbnail": "/img/projects/dream_stage/dream_stage_01.png",
     "title": "DreamStage",
     "category": "Programação",
     "subcategory": "IA",
@@ -152,7 +148,6 @@
 
   {
     "id": 1,
-    "thumbnail": "/img/projects/foguete_ia/foguete_ia_01.png",
     "title": "FogueteIa",
     "category": "Programação",
     "subcategory": "IA",
@@ -195,7 +190,6 @@
   
   {
     "id": 3,
-    "thumbnail": "/img/projects/emprega_social/emprega_social_01.png",
     "title": "Emprega Social",
     "category": "Programação",
     "subcategory": "Sites",
@@ -240,7 +234,6 @@
 
   {
     "id": 2,
-    "thumbnail": "/img/projects/castelo_arcano/castelo_arcano_01.png",
     "title": "Castelo Arcano",
     "category": "Programação",
     "subcategory": "Jogos",

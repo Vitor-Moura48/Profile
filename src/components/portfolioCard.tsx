@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, Github, ExternalLink, X } from "lucide-react";
+import { Github, ExternalLink, X } from "lucide-react";
 import { Project } from "../types/project";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "../hooks/useTranslation";
+import { formatProjectDate } from "../utils/formatDate";
 
 interface PortfolioCardProps {
   project: Project;
@@ -13,7 +14,7 @@ interface PortfolioCardProps {
 export const PortfolioCard = ({ project }: PortfolioCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number>(0);
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   const transDesc = t(`projectsData.${project.id}.description`) !== `projectsData.${project.id}.description` 
     ? t(`projectsData.${project.id}.description`) 
@@ -38,61 +39,28 @@ export const PortfolioCard = ({ project }: PortfolioCardProps) => {
 
   return (
     <>
-      {/* Card + título como bloco único com conexão visual */}
-      <div className="flex flex-col group/card cursor-pointer" onClick={() => setIsExpanded(true)}>
-        {/* Card Compacto */}
-        <motion.div
-          className="relative w-full aspect-[4/3] rounded-t-xl overflow-hidden border border-b-0 border-zinc-700/50"
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.2 }}
-        >
-          {/* Imagem de fundo */}
-          <img
-            src={project.thumbnail}
-            alt={project.title}
-            className="w-full h-full object-cover group-hover/card:brightness-75 transition-all duration-300"
-          />
+      {/* Card texto — data, título, introdução */}
+      <motion.div
+        className="group/card cursor-pointer bg-zinc-900/60 border border-zinc-700/50 rounded-xl p-4 sm:p-5 flex flex-col gap-2 sm:gap-3 hover:border-zinc-500/70 hover:bg-zinc-800/50 transition-all duration-300 h-full"
+        onClick={() => setIsExpanded(true)}
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.2 }}
+      >
+        {/* Data */}
+        <span className="text-[10px] sm:text-xs font-medium text-zinc-500 uppercase tracking-wider">
+          {tTag(formatProjectDate(project.dateCompleted, lang))}
+        </span>
 
-          {/* Overlay gradiente */}
-          <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+        {/* Título */}
+        <h3 className="text-white font-bold text-sm sm:text-lg md:text-xl leading-tight group-hover/card:text-blue-400 transition-colors duration-300">
+          {project.title}
+        </h3>
 
-          {/* Conteúdo hover */}
-          <div className="absolute inset-0 p-4 flex flex-col justify-end">
-            <p className="text-zinc-300 text-[10px] sm:text-sm group-hover/card:opacity-100 opacity-0 transition-opacity duration-300 line-clamp-1 mb-1 sm:mb-2">
-              {tTag(project.subcategory)}
-            </p>
-
-            {/* Tech Stack Preview */}
-            <div className="flex flex-wrap gap-1 group-hover/card:opacity-100 opacity-0 transition-opacity duration-300">
-              {project.techStack.slice(0, 3).map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="px-1 sm:px-2 py-0.5 sm:py-1 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 text-[8px] sm:text-xs rounded border border-blue-500/30 whitespace-nowrap"
-                >
-                  {tech.label}
-                </span>
-              ))}
-              {project.techStack.length > 3 && (
-                <span className="px-1 sm:px-2 py-0.5 sm:py-1 bg-zinc-500/20 text-zinc-300 text-[8px] sm:text-xs rounded">
-                  +{project.techStack.length - 3}
-                </span>
-              )}
-            </div>
-          </div>
-
-          {/* Indicador de expansão */}
-          <div className="absolute top-3 right-3 bg-blue-500/80 p-2 rounded-lg group-hover/card:opacity-100 opacity-0 transition-opacity duration-300">
-            <ChevronDown className="w-5 h-5 text-white" />
-          </div>
-        </motion.div>
-
-        {/* Título — aba conectada ao card */}
-        <div className="border border-t-0 border-zinc-700/50 rounded-b-xl bg-zinc-900/80 px-4 py-3 group-hover/card:border-blue-500/40 group-hover/card:bg-zinc-800/60 transition-all duration-300">
-          <h3 className="text-white font-semibold text-xs sm:text-base text-center truncate group-hover/card:text-blue-400 transition-colors duration-300">
-            {project.title}
-          </h3>
-        </div>
-      </div>
+        {/* Descrição / Introdução */}
+        <p className="text-zinc-400 text-[11px] sm:text-sm leading-relaxed line-clamp-3">
+          {transDesc}
+        </p>
+      </motion.div>
 
       {/* Modal expandido */}
       <AnimatePresence>
@@ -115,6 +83,7 @@ export const PortfolioCard = ({ project }: PortfolioCardProps) => {
               transition={{ duration: 0.3 }}
               onKeyDown={handleKeyDown}
               className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
+              onClick={() => setIsExpanded(false)}
             >
               <motion.div
                 className="bg-zinc-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"

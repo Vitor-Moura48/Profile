@@ -23,11 +23,6 @@ export const ProjectCard = (
           : "border-zinc-700 hover:border-zinc-500"
         }`}
     >
-      <img
-        src={project.thumbnail}
-        alt={project.title}
-        className="w-full h-32 object-cover rounded-lg bg-zinc-800"
-      />
 
       <div className="p-2 text-sm font-medium text-zinc-300">
         {project.title}

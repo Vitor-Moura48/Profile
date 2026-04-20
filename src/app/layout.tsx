@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Metadata } from "next";
 import { LanguageProvider } from "../context/LanguageContext";
-import { ThemeProvider } from "../context/ThemeContext";
 import { metadata as metadataConfig } from "../lib/metadata";
 import { ScrollToTop } from "../components/scrollToTop";
 
@@ -63,15 +62,13 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-        <ThemeProvider>
-          <LanguageProvider>
+        <LanguageProvider>
             <ParticlesBackground />
             <ScrollToTop />
             <div className="relative z-10 w-full min-h-screen">
               {children}
             </div>
           </LanguageProvider>
-        </ThemeProvider>
       </body>
     </html>
   );

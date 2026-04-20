@@ -25,5 +25,5 @@ export function useTranslation(langOverride?: Lang) {
     return typeof obj === "string" ? obj : key;
   }
 
-  return { t };
+  return { t, lang };
 }

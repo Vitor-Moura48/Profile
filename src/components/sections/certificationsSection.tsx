@@ -131,6 +131,7 @@ export const CertificationsSection = () => {
                   src={selectedCert.image}
                   alt={selectedCert.title}
                   fill
+                  sizes="(max-width: 640px) 90vw, 384px"
                   className="object-contain p-4 group-hover/img:scale-105 transition-transform duration-300"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -212,6 +213,7 @@ export const CertificationsSection = () => {
                     src={cert.image}
                     alt={cert.title}
                     fill
+                    sizes="40px"
                     className="object-contain p-1"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -242,6 +244,7 @@ export const CertificationsSection = () => {
                       src={cert.image}
                       alt={cert.title}
                       fill
+                      sizes="(max-width: 1024px) 50vw, 176px"
                       className="object-contain group-hover/img:scale-105 transition-transform duration-300 p-2"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
