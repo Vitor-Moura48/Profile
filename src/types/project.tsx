@@ -7,11 +7,13 @@ export type Project = {
   description: string;
   
   links: {
-    type?: "github" | "live" | "behance" | "external"; // Tipos pré-definidos para ícones
+    type?: "github" | "Itch.io" | "external"; // Tipos pré-definidos para ícones
     url: string;
     label: string;
     icon_src?: string; // Opcional, se usar ícones customizados
   }[];
+
+  imageRendering?: "auto" | "pixelated" | "crisp-edges";
 
   media: {
     type: "image" | "gif" | "video";

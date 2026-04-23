@@ -11,9 +11,9 @@ import { useState } from 'react';
 
 // ProjectHeader: Título, Categoria, Data, Descrição, Links
 const ProjectHeader = (
-    { project }:
+  { project }:
     { project: Project }
-  ) => {
+) => {
 
   return (
 
@@ -40,8 +40,6 @@ const ProjectHeader = (
             let IconComponent;
             switch (link.type) {
               case 'github': IconComponent = Github; break;
-              case 'live': IconComponent = ExternalLink; break; // Usar ExternalLink para demos ao vivo
-              case 'behance': IconComponent = LinkIcon; break; // Ou um ícone Behance se tiver
               default: IconComponent = LinkIcon;
             }
 
@@ -69,12 +67,12 @@ const ProjectHeader = (
 
 // MediaGallery: Lista de imagens, GIFs, vídeos
 const MediaGallery = (
-    { media }:
+  { media }:
     { media: Project['media'] }
-  ) => {
+) => {
 
   const [selectedMedia, setSelectedMedia] = useState<{ src: string; isGif: boolean; } | null>(null);
-    
+
   if (!media || media.length === 0) return null;
 
   return (
@@ -84,13 +82,13 @@ const MediaGallery = (
       <h2 className="text-3xl font-semibold text-white mb-6">Galeria de Mídia</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+
         {media.map((item, index) => (
           <div key={index} className="bg-zinc-800 rounded-lg overflow-hidden shadow-xl border border-zinc-700">
 
             {item.type === 'image' || item.type === 'gif' ? (
               <div className="relative w-full aspect-video"> {/* Ajusta a proporção para 16:9 */}
-   
+
                 <Image
                   src={item.src}
                   alt=""
@@ -130,9 +128,9 @@ const MediaGallery = (
 
 // TechStack: Tecnologias utilizadas
 const TechStack = (
-    { techStack }:
+  { techStack }:
     { techStack: Project['techStack'] }
-  ) => {
+) => {
 
   if (!techStack || techStack.length === 0) return null;
 
@@ -147,11 +145,11 @@ const TechStack = (
         {techStack.map((tech, index) => (
 
           <div key={index} className="flex items-center bg-zinc-700 px-4 py-2 rounded-full text-lg text-gray-200 shadow-md">
-            
+
             {tech.icon_src && (
               <Image src={tech.icon_src} alt={tech.label} width={24} height={24} className="mr-2" />
             )}
-           
+
             <span>{tech.label}</span>
 
           </div>
@@ -167,9 +165,9 @@ const TechStack = (
 
 // ConclusionSection: Conclusão do projeto
 const ConclusionSection = (
-    { conclusion }:
+  { conclusion }:
     { conclusion: Project['conclusion'] }
-  ) => {
+) => {
 
   if (!conclusion) return null;
 
@@ -189,9 +187,9 @@ const ConclusionSection = (
 };
 
 export const ProjectDetails = (
-    { project }:
+  { project }:
     { project: Project }
-  ) => {
+) => {
 
   if (!project) {
 
@@ -220,7 +218,7 @@ export const ProjectDetails = (
 
         {project.conclusion && ( // Renderiza a conclusão apenas se houver conteúdo
           <>
-            
+
             <div className="w-full h-px bg-linear-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 m-4" />
 
             <ConclusionSection conclusion={project.conclusion} />

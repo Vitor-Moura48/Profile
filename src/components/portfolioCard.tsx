@@ -129,11 +129,12 @@ export const PortfolioCard = ({ project }: PortfolioCardProps) => {
                       </h3>
 
                       {/* Imagem Principal */}
-                      <div className="w-full rounded-lg overflow-hidden bg-zinc-800">
+                      <div className="w-full rounded-lg overflow-hidden bg-black">
                         <img
                           src={project.media[selectedImage]?.src}
                           alt={`${project.title} - ${selectedImage + 1}`}
-                          className="w-full h-48 md:h-96 object-cover"
+                          className="w-full h-48 md:h-96 object-contain"
+                          style={project.imageRendering ? { imageRendering: project.imageRendering } : undefined}
                         />
                       </div>
 
@@ -153,6 +154,7 @@ export const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                 src={media.src}
                                 alt={`Thumbnail ${idx + 1}`}
                                 className="w-20 h-20 object-cover"
+                                style={project.imageRendering ? { imageRendering: project.imageRendering } : undefined}
                               />
                             </button>
                           ))}
@@ -212,7 +214,11 @@ export const PortfolioCard = ({ project }: PortfolioCardProps) => {
                               rel="noopener noreferrer"
                               className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-200 transform hover:scale-105"
                             >
-                              <Icon className="w-5 h-5" />
+                              {link.icon_src ? (
+                                <img src={link.icon_src} alt="" className="w-5 h-5" />
+                              ) : (
+                                <Icon className="w-5 h-5" />
+                              )}
                               {link.label}
                             </a>
                           );
