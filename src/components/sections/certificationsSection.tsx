@@ -161,27 +161,29 @@ export const CertificationsSection = () => {
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-1.5">
-                  {selectedCert.techStack.map((tech, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30"
-                    >
-                      <Image
-                        src={tech.icon_src}
-                        alt={tech.label}
-                        width={16}
-                        height={16}
-                        className="w-4 h-4"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = "none";
-                        }}
-                      />
-                      <span className="text-xs font-medium text-blue-300">{tech.label}</span>
-                    </div>
-                  ))}
-                </div>
+                {selectedCert.techStack && selectedCert.techStack.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {selectedCert.techStack.map((tech, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30"
+                      >
+                        <Image
+                          src={tech.icon_src}
+                          alt={tech.label}
+                          width={16}
+                          height={16}
+                          className="w-4 h-4"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = "none";
+                          }}
+                        />
+                        <span className="text-xs font-medium text-blue-300">{tech.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
@@ -234,7 +236,7 @@ export const CertificationsSection = () => {
             {/* ── DESKTOP: full card ── */}
             <div className="hidden md:flex flex-col lg:flex-row h-full gap-6 p-8 w-full">
               {/* Image */}
-              <div className="w-full lg:w-44 aspect-[4/3] lg:aspect-square lg:h-44 flex-shrink-0">
+              <div className="w-full lg:w-44 aspect-4/3 lg:aspect-square lg:h-44 flex-shrink-0">
                 <div
                   onClick={() => setExpandedImage(cert.image)}
                   className="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-blue-600/10 to-purple-600/10 border border-zinc-700/50 flex items-center justify-center cursor-pointer group/img"
@@ -280,35 +282,37 @@ export const CertificationsSection = () => {
                   </p>
                 </div>
 
-                <div className="mt-4">
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {t("projects.stack")}
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {cert.techStack.map((tech, idx) => (
-                      <motion.div
-                        key={idx}
-                        whileHover={{ scale: 1.05 }}
-                        className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 hover:border-blue-500/60 transition-all"
-                      >
-                        <Image
-                          src={tech.icon_src}
-                          alt={tech.label}
-                          width={20}
-                          height={20}
-                          className="w-5 h-5"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = "none";
-                          }}
-                        />
-                        <span className="text-sm font-medium text-blue-300">
-                          {tech.label}
-                        </span>
-                      </motion.div>
-                    ))}
+                {cert.techStack && cert.techStack.length > 0 && (
+                  <div className="mt-4">
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {t("projects.stack")}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      {cert.techStack.map((tech, idx) => (
+                        <motion.div
+                          key={idx}
+                          whileHover={{ scale: 1.05 }}
+                          className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 hover:border-blue-500/60 transition-all"
+                        >
+                          <Image
+                            src={tech.icon_src}
+                            alt={tech.label}
+                            width={20}
+                            height={20}
+                            className="w-5 h-5"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = "none";
+                            }}
+                          />
+                          <span className="text-sm font-medium text-blue-300">
+                            {tech.label}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </motion.div>

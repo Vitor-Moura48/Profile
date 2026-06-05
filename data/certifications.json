@@ -54,5 +54,14 @@
         "icon_src": "/img/icons/nextjs.svg"
       }
     ]
+  },
+  {
+    "id": 3,
+    "title": "Festival REC'n'Play 2025",
+    "description": "Evento de Tecnologia e Inovação. Realizado pelo Porto Digital, Ampla Comunicação e SEBRAE.",
+    "image": "/img/certifications/certificado_rec_2025.png",
+    "issuer": "Porto Digital",
+    "date": "2025",
+    "techStack": []
   }
 ]
