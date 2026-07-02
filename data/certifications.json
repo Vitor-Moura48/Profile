@@ -63,5 +63,19 @@
     "issuer": "Porto Digital",
     "date": "2025",
     "techStack": []
+  },
+  {
+    "id": 4,
+    "title": "Docker Essentials: A Developer Introduction",
+    "description": "Certificação da IBM em fundamentos de Docker, incluindo criação, execução e gerenciamento de contêineres.",
+    "image": "/img/certifications/certificado_ibm_docker.png",
+    "issuer": "IBM",
+    "date": "2026",
+    "techStack": [
+      {
+        "label": "Docker",
+        "icon_src": "/img/icons/Docker.svg"
+      }
+    ]
   }
 ]
