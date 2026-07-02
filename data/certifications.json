@@ -9,23 +9,23 @@
     "techStack": [
       {
         "label": "Python",
-        "icon_src": "/img/icons/python.svg"
+        "icon_src": "/img/icons/Python.svg"
       },
       {
         "label": "FastAPI",
-        "icon_src": "/img/icons/fastapi.svg"
+        "icon_src": "/img/icons/FastAPI.svg"
       },
       {
         "label": "React",
-        "icon_src": "/img/icons/react.svg"
+        "icon_src": "/img/icons/React.svg"
       },
       {
         "label": "Next.js",
-        "icon_src": "/img/icons/nextjs.svg"
+        "icon_src": "/img/icons/Nextjs.svg"
       },
       {
         "label": "OpenClaw",
-        "icon_src": "/img/icons/openclaw.svg"
+        "icon_src": "/img/icons/Openclaw.svg"
       }
     ]
   },
@@ -39,19 +39,19 @@
     "techStack": [
       {
         "label": "Python",
-        "icon_src": "/img/icons/python.svg"
+        "icon_src": "/img/icons/Python.svg"
       },
       {
         "label": "FastAPI",
-        "icon_src": "/img/icons/fastapi.svg"
+        "icon_src": "/img/icons/FastAPI.svg"
       },
       {
         "label": "React",
-        "icon_src": "/img/icons/react.svg"
+        "icon_src": "/img/icons/React.svg"
       },
       {
         "label": "Next.js",
-        "icon_src": "/img/icons/nextjs.svg"
+        "icon_src": "/img/icons/Nextjs.svg"
       }
     ]
   },
