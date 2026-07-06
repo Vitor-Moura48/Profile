@@ -77,5 +77,15 @@
         "icon_src": "/img/icons/Docker.svg"
       }
     ]
+  },
+
+  {
+    "id": 5,
+    "title": "Introduction to Cybersecurity",
+    "description": "Certificação da Cisco em fundamentos de Cybersecurity, incluindo conceitos de tipos de ataques e medidas de proteção.",
+    "image": "/img/certifications/certificado_cisco_cyberseguranca.png",
+    "issuer": "Cisco",
+    "date": "2026",
+    "techStack": []
   }
 ]
