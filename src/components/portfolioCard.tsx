@@ -230,9 +230,6 @@ export const PortfolioCard = ({ project }: PortfolioCardProps) => {
                   {/* Conclusão */}
                   {transConcl && (
                     <div className="bg-zinc-800/50 border border-zinc-700 rounded-lg p-4">
-                      <h3 className="text-lg font-semibold text-white mb-2">
-                        {t("projects.conclusion")}
-                      </h3>
                       <p className="text-zinc-300 text-justify">
                         {transConcl}
                       </p>
