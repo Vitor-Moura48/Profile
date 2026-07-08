@@ -78,7 +78,6 @@
       }
     ]
   },
-
   {
     "id": 5,
     "title": "Introduction to Cybersecurity",
@@ -86,6 +85,38 @@
     "image": "/img/certifications/certificado_cisco_cyberseguranca.png",
     "issuer": "Cisco",
     "date": "2026",
-    "techStack": []
+    "techStack": [
+      {
+        "label": "Linux",
+        "icon_src": "/img/icons/Linux.svg"
+      },
+      {
+        "label": "Windows",
+        "icon_src": "/img/icons/Windows.svg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Operating Systems Basics",
+    "description": "Certificação da Cisco em fundamentos de sistemas operacionais, incluindo conceitos e funcionalidades dos principais sistemas operacionais.",
+    "image": "/img/certifications/certificado_cisco_sistemas_operacionais.png",
+    "issuer": "Cisco",
+    "date": "2026",
+    "techStack": [
+      {
+        "label": "Linux",
+        "icon_src": "/img/icons/Linux.svg"
+      },
+      {
+        "label": "Windows",
+        "icon_src": "/img/icons/Windows.svg"
+      },
+      {
+        "label": "Android",
+        "icon_src": "/img/icons/Android.svg"
+      }
+    ]
   }
+
 ]
