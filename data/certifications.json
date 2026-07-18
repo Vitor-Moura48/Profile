@@ -117,6 +117,14 @@
         "icon_src": "/img/icons/Android.svg"
       }
     ]
+  },
+  {
+    "id": 7,
+    "title": "Building Scalable Systems",
+    "description": "Certificação da IBM em fundamentos de construção de sistemas escaláveis, incluindo conceitos de arquitetura e design de sistemas.",
+    "image": "/img/certifications/certificado_ibm_building_scalable_systems.png",
+    "issuer": "IBM",
+    "date": "2026",
+    "techStack": []
   }
-
 ]
