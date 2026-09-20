@@ -126,5 +126,14 @@
     "issuer": "IBM",
     "date": "2026",
     "techStack": []
+  },
+  {
+    "id": 8,
+    "title": "Seminário Pró-Pesquisa 2026",
+    "description": "Seminário Pró-Pesquisa 2026, promovido pelo Departamento de Educação e Cultura do Exército, voltado para discussões sobre pesquisa científica e inovação tecnológica.",
+    "image": "/img/certifications/certificado_decex_2026.png",
+    "issuer": "DECEx",
+    "date": "2026",
+    "techStack": []
   }
 ]
